@@ -8,27 +8,37 @@ const NoteForm = (props) => {
         email: "",
         role: "" 
         })
+    const handleChanges = e => {
+        setNote({...note, [e.target.name]: e.target.value});
+        console.log(e.target.value)
+    }
     return (
         <form>
         <label htmlFor="name">Name:</label>
         <input
         id="name"
         type="text"
-        name="name"/>
+        name="name"
+        onChange={handleChanges}
+        />
 
         <label htmlFor="email">Email:</label>
         <input
         id="email"
         type="text"
-        name="email"/>
+        name="email"
+        onChange={handleChanges}
+        />
         
         <label htmlFor="name">Role:</label>
         <input
         id="role"
         type="text"
-        name="role"/>
+        name="role"
+        onChange={handleChanges}
+        />
 
-            
+        <button type="submit">Add Team Member</button>    
         </form>
     );
 }
