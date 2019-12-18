@@ -25,7 +25,7 @@ const NoteForm = (props) => {
     }
     
     return (
-        <form>
+        <form onSubmit={submitForm}>
         <label htmlFor="name">Name:</label>
         <input
         id="name"
