@@ -2,7 +2,12 @@ import './App.css'
 
 import React, {useState} from 'react'
 
-const NoteForm = () => {
+const NoteForm = (props) => {
+    const [note, setNote] = useState({
+        name: "",
+        email: "",
+        role: "" 
+        })
     return (
         <form>
         <label htmlFor="name">Name:</label>
